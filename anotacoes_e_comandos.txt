@@ -1,0 +1,19 @@
+ANOTAÇÕES IMPORTANTES
+======================
+
+
+Instalar package.json
+
+cd GitHub\instagram_clone\api\
+
+npm install
+
+-----------------------------------
+
+
+
+
+
+
+
+
