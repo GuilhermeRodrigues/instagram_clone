@@ -11,6 +11,13 @@ npm install
 -----------------------------------
 
 
+MongoDB
+=====================================================
+Acessar pasta MongoDB -> cd "Program Files"\MongoDB\Server\3.6\bin
+Executar client MongoDB pelo cmd -> mongod.exe
+Executar SGBD MongoDB pelo cmd -> mongo.exe
+
+
 
 
 
