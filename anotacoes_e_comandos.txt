@@ -18,6 +18,11 @@ Executar client MongoDB pelo cmd -> mongod.exe
 Executar SGBD MongoDB pelo cmd -> mongo.exe
 
 
+Connect-Multiparty
+=====================================================
+Instalar o Connect-Multiparty -> npm install connect-multiparty --save
+
+
 
 
 
