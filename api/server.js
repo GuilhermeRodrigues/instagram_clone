@@ -161,8 +161,29 @@ app.put('/api/:id', function(req, res){
 //DELETE by ID (remover)
 app.delete('/api/:id', function(req, res){
 
-    res.send(req.params.id);
+    /* Forma de apagar apenas o comentário, modificando o documento, por isso o UPDATE e não REMOVE */
+    db.open(function(err, mongoclient){
+        mongoclient.collection('postagens', function(err, collection){
+            collection.update(
+                { }, 
+                { $pull :   {
+                                comentarios : { id_comentario : objectId(req.params.id)}
+                            }
+                },
+                {multi : true},
+                function(err, records){
+                    if(err){
+                        res.json(err);
+                    } else{
+                        res.json(records);
+                    }
+                    mongoclient.close();
+                }
+            );
+        });
+    });
 
+    /* Forma de apagar o documento */
     /*
     db.open(function(err, mongoclient){
         mongoclient.collection('postagens', function(err, collection){
